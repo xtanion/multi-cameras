@@ -39,4 +39,18 @@ function getRotation(quat, rotation) {
     return rotation;
 }                    
                                                                           
-function relation(X1, X2, R1,R2)
+function extrinsic_cam2(X1, R1, T1, X0, R0, T0) {
+    // x1, R1,T1 are position, rotation & translation vectors of cam1 respectively
+    // x0, R0,T0 are relative position, rotation & translation vectors
+    // X2, R2, T2 can be claluclated as follows:
+
+    let X2 = new THREE.Vector3();
+    let R2 = new THREE.Matrix3();
+    let T2 = new THREE.Vector3();
+
+    X2.set(R0.multiply(X1) + T0);
+
+    T2.set(R1.multiply(T0) + T1);
+
+    return X2, T2;
+}
