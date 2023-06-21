@@ -1,1 +1,1 @@
-calibrations are computed at [calibration.js](cam-play/js/calibration.js).
+calibrations are computed at [calibration.js](https://github.com/xtanion/multi-cameras/blob/main/js/calibration.js).
