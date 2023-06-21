@@ -1,0 +1,1 @@
+calibrations are computed at [calibration.js](cam-play/js/calibration.js).
